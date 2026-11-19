@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI: all 55 PS5 trophies, roadmap to platinum</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; offline guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every one of the 55 official trophies — name, description and grade exactly as PlayStation lists them — with a guide in our own words, a cited source beside each one, a roadmap to the platinum, and a tracker that remembers your progress in this browser.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-big"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></p>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="progress-sub" id="progressSub">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+    <p class="progress-sub" id="demoNote" hidden>Demo progress (?demo=1) — tick trophies yourself to track for real.</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" data-view="tracker" class="active" aria-current="page">Tracker</button>
+  <button type="button" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" data-view="missables">Missables</button>
+  <button type="button" data-view="sources">Sources &amp; method</button>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="controls" role="search">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="side-story">Side stories</option>
+          <option value="robbery">Robberies</option>
+          <option value="completion">100% completion</option>
+          <option value="misc">Everything else</option>
+        </select>
+      </label>
+      <label class="check"><input id="unearnedOnly" type="checkbox"> Unearned only</label>
+      <label class="check spoiler"><input id="spoilers" type="checkbox" checked> Hide story spoilers until earned</label>
+      <span class="spacer"></span>
+      <button id="export" type="button">Export progress</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+      <button id="reset" type="button" class="quiet">Reset</button>
+    </div>
+    <p class="count-line" id="countLine"></p>
+    <p class="spoiler-note" id="spoilerNote" hidden>Story spoilers are hidden: story trophies show only a sealed card until you earn them (or switch the setting off).</p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match these filters. Clear the search or widen the filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2 id="roadmapTitle">Roadmap to the Platinum</h2>
+    <p class="roadmap-est" id="roadmapEstimate"></p>
+    <ol class="stages" id="stages"></ol>
+    <h3>The 100% completion checklist (for A Long Road)</h3>
+    <p>These are the numbers the in-game checklist asks for. You do not need every collectible in the game — stop each activity once its number is met. Source: KeenGamer's GTA 6 Trophy Guide &amp; Platinum Roadmap.</p>
+    <div class="checklist" id="checklist"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <h2>Missables — read this before Chapter 1 ends</h2>
+    <div class="alert">
+      <p><strong>One trophy is potentially missable: Positive Mental Attitude.</strong> Lucia's balcony meditation in Chapter 1 — after the mission <em>Down to Earth</em>, when she mentions meditating in the morning at Jason's house, follow her to the balcony and accept — disappears once Chapter 1 ends. Do it before leaving the chapter, and keep a Chapter 1 save until the trophy pops. Sources: KeenGamer; OutputLag.</p>
+    </div>
+    <h3>Save discipline (there is no mission replay)</h3>
+    <ul>
+      <li>Keep a manual save at the start of every chapter and one from just before the final mission. The game has 15 manual save slots plus one autosave.</li>
+      <li>There is no mission replay and no New Game Plus: once a story mission is done you cannot select it again.</li>
+      <li>Everything outside the story stays available after the credits, including the side-story finales and the 100% checklist — so only the Chapter 1 meditation and time-sensitive strand steps need doing on time.</li>
+      <li>One strand step is time-sensitive: the Chapter 3 race against Yago in his street racing strand carries an hourglass icon. Save first, then race it the moment it appears. It counts toward Strangers &amp; Freaks.</li>
+      <li>Never use cheats on your trophy save: cheats switch off trophies and saving while active.</li>
+    </ul>
+    <p class="muted">Sources: KeenGamer — GTA 6 Trophy Guide &amp; Platinum Roadmap; OutputLag — GTA 6 Trophy List.</p>
+    <h3>Missable trophies in this list</h3>
+    <ul class="trophy-list" id="missableList"></ul>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <h2>Sources &amp; method</h2>
+    <p>Every trophy's name, description and grade are shown exactly as PlayStation publishes them, taken from the official list as carried by the trophy trackers. Every guide is written in our own words for this guide — no guide text is copied from another guide. Beside each trophy's guide we name the source each fact came from, so a reader can check it; where no source confirms a method, the guide says so instead of guessing.</p>
+    <ul id="sourceList"></ul>
+    <h3>What we do not know yet</h3>
+    <p>Five hidden trophies have no confirmed unlock method at launch — In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There and Ten Pin (partly reported). Their guides say what the official description implies and mark the rest unconfirmed, rather than inventing locations or steps. Personal Best's method is reported but not fully confirmed, and is marked that way too.</p>
+    <h3>About this guide</h3>
+    <p>Unofficial and unaffiliated: no Rockstar logo, official artwork, box art or game screenshots appear anywhere. All 55 trophies are single-player — there are no online trophies. Progress is stored only in your browser (localStorage); export and import move it as a file, and nothing is sent anywhere. The whole guide runs offline from its own files.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide — an unofficial, fan-made guide to Grand Theft Auto VI's PlayStation 5 trophies. Not affiliated with Rockstar Games, Sony or PlayStation. Trophy names and descriptions are PlayStation's own words, shown as published.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
